@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bănuț — educație financiară pentru tineri: lecții scurte, calculatoare, jocuri și un certificat la final.">
+  <title>Bănuț — Educație financiară pentru tineri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pete" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <!-- ================= BARA LATERALĂ ================= -->
+  <aside class="lateral" aria-label="Navigare">
+    <a href="#acasa" class="logo">
+      <span class="logo-moneda" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="22" r="14"/><path d="M20 15v14M16 18.5c0-2 1.8-3 4-3s4 1 4 2.6c0 4-8 2.4-8 6.4 0 1.7 1.8 2.8 4 2.8s4-1 4-3"/><path class="frunza" d="M20 8c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg>
+      </span>
+      <span>Bănuț<small>educație financiară</small></span>
+    </a>
+
+    <nav class="meniu" aria-label="Secțiuni">
+      <a href="#acasa" class="activ"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9H4z"/><path d="M10 20v-5h4v5"/></svg>Acasă</a>
+      <a href="#lectii"><svg viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/></svg>Lecții <b id="meniu-lectii">0/6</b></a>
+      <a href="#unelte"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M8 18h2M12 18h2M16 15v3"/></svg>Calculatoare</a>
+      <a href="#obiective"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.8"/></svg>Obiective</a>
+      <a href="#joc"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="5"/><path d="M8 11v3M6.5 12.5h3M15 12h.01M17.5 13.5h.01"/></svg>Nevoie sau dorință?</a>
+      <a href="#quiz"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg>Test final</a>
+      <a href="#glosar"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>Glosar</a>
+      <a href="#certificat"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="m9 13-2 8 5-3 5 3-2-8"/></svg>Certificat</a>
+    </nav>
+
+    <div class="card-nivel">
+      <div class="nivel-sus">
+        <span class="nivel-insigna" id="nivel-nume">Începător</span>
+        <span class="nivel-xp"><b id="xp">0</b> XP</span>
+      </div>
+      <div class="nivel-bara"><div id="nivel-bara"></div></div>
+      <p id="nivel-urmator">20 XP până la nivelul următor</p>
+    </div>
+  </aside>
+
+  <!-- ================= CONȚINUT ================= -->
+  <main class="continut">
+
+    <!-- ACASĂ -->
+    <section id="acasa" class="sectiune">
+      <div class="salut">
+        <div class="salut-text">
+          <span class="pastila">Pentru elevi de 14–19 ani</span>
+          <h1>Banii tăi,<br><span class="degrade">regulile tale.</span></h1>
+          <p>Șase lecții scurte, calculatoare pe care le poți folosi chiar azi și câteva jocuri. Fără termeni complicați și fără reclame la bănci — doar ce ai nevoie ca să iei decizii bune cu banii tăi.</p>
+          <div class="salut-actiuni">
+            <button type="button" class="btn btn-principal" id="continua-lectia">Începe prima lecție</button>
+            <a href="#unelte" class="btn btn-alb">Încearcă un calculator</a>
+          </div>
+        </div>
+        <div class="salut-ilustratie" aria-hidden="true">
+          <div class="pusculita">
+            <svg viewBox="0 -40 220 220">
+              <defs>
+                <linearGradient id="g-porc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb3c7"/><stop offset="1" stop-color="#ff8fab"/></linearGradient>
+                <linearGradient id="g-moneda" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#f7b731"/></linearGradient>
+              </defs>
+              <ellipse cx="112" cy="168" rx="70" ry="8" fill="#1b153014"/>
+              <path d="M44 104c0-34 30-58 70-58s70 24 70 58-30 52-70 52-70-18-70-52z" fill="url(#g-porc)"/>
+              <path d="M60 144l-4 20h18l4-14M150 150l4 14h18l-4-22" fill="#ff8fab"/>
+              <path d="M74 56l-6-22 24 14" fill="#ff8fab"/>
+              <ellipse cx="186" cy="102" rx="16" ry="14" fill="#ff8fab"/>
+              <circle cx="182" cy="100" r="2.6" fill="#b4436c"/><circle cx="191" cy="100" r="2.6" fill="#b4436c"/>
+              <circle cx="150" cy="86" r="4.5" fill="#1b1530"/>
+              <path d="M96 54h34" stroke="#b4436c" stroke-width="5" stroke-linecap="round"/>
+              <path d="M44 104c-12 0-18-6-18-14" stroke="#ff8fab" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <g class="moneda-cade"><circle cx="113" cy="28" r="15" fill="url(#g-moneda)" stroke="#e09a12" stroke-width="2"/><text x="113" y="33" text-anchor="middle" font-size="14" font-weight="800" fill="#a8650a" font-family="Sora, sans-serif">1</text></g>
+            </svg>
+          </div>
+          <div class="bula bula-1"><b>+15.528 lei</b><span>100 lei/lună · 10 ani · 5%</span></div>
+          <div class="bula bula-2"><b>50 / 30 / 20</b><span>regula bugetului</span></div>
+        </div>
+      </div>
+
+      <div class="panou-progres">
+        <div class="carta-progres">
+          <div class="inel" id="inel-lectii" style="--p:0"><span id="procent-lectii">0%</span></div>
+          <div><b>Progresul tău</b><span id="text-progres">0 din 6 lecții terminate</span></div>
+        </div>
+        <div class="carta-progres">
+          <div class="icon-rotund menta"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+          <div><b id="cel-mai-bun-quiz">—</b><span>cel mai bun scor la test</span></div>
+        </div>
+        <div class="carta-progres">
+          <div class="icon-rotund piersica"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <div><b id="numar-obiective">0</b><span>obiective de economisire</span></div>
+        </div>
+        <div class="carta-progres">
+          <div class="icon-rotund galben"><svg viewBox="0 0 24 24"><path d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg></div>
+          <div><b id="stare-certificat">Blocat</b><span>certificatul tău</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LECȚII -->
+    <section id="lectii" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Capitolul 1</span>
+        <h2>Lecții de 5 minute</h2>
+        <p>Fiecare lecție are câteva pagini scurte și o întrebare la final. Primești 20 XP pentru fiecare lecție terminată.</p>
+      </div>
+      <div class="grila-lectii" id="grila-lectii"></div>
+    </section>
+
+    <!-- CALCULATOARE -->
+    <section id="unelte" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Capitolul 2</span>
+        <h2>Calculatoare</h2>
+        <p>Pune cifrele tale și vezi ce se întâmplă. Nimic nu se trimite nicăieri: totul se calculează în browserul tău.</p>
+      </div>
+
+      <div class="file" role="tablist" aria-label="Calculatoare">
+        <button type="button" role="tab" class="activ" data-fila="buget" aria-selected="true">Buget 50/30/20</button>
+        <button type="button" role="tab" data-fila="dobanda" aria-selected="false">Dobânda compusă</button>
+        <button type="button" role="tab" data-fila="inflatie" aria-selected="false">Inflația</button>
+      </div>
+
+      <!-- buget -->
+      <div class="fila-panou" data-panou="buget">
+        <div class="calc-grila">
+          <div class="carta calc-intrari">
+            <label class="camp mare">
+              <span>Câți bani primești pe lună?</span>
+              <div class="camp-suma"><input type="number" id="buget-venit" min="0" step="10" value="600"><em>lei</em></div>
+              <small>Alocație, bani de buzunar, un job de weekend — tot ce intră.</small>
+            </label>
+            <div class="separator"></div>
+            <p class="eticheta-mica">Cât cheltui de fapt? (opțional)</p>
+            <label class="camp"><span><i class="punct violet"></i>Nevoi <small>transport, mâncare la școală, telefon</small></span><div class="camp-suma"><input type="number" id="buget-nevoi" min="0" step="10" value="250"><em>lei</em></div></label>
+            <label class="camp"><span><i class="punct piersica"></i>Dorințe <small>ieșiri, jocuri, haine în plus</small></span><div class="camp-suma"><input type="number" id="buget-dorinte" min="0" step="10" value="280"><em>lei</em></div></label>
+            <label class="camp"><span><i class="punct menta"></i>Economii <small>pușculiță, cont de economii</small></span><div class="camp-suma"><input type="number" id="buget-economii" min="0" step="10" value="70"><em>lei</em></div></label>
+          </div>
+          <div class="carta calc-rezultat">
+            <div class="buget-sus">
+              <div class="gogoasa" id="gogoasa"><div><b id="buget-total">600</b><span>lei / lună</span></div></div>
+              <ul class="legenda-buget" id="legenda-buget"></ul>
+            </div>
+            <h3>Recomandat vs. ce faci acum</h3>
+            <div class="comparatie" id="comparatie-buget"></div>
+            <div class="sfat" id="sfat-buget"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dobândă -->
+      <div class="fila-panou" data-panou="dobanda" hidden>
+        <div class="calc-grila">
+          <div class="carta calc-intrari">
+            <label class="camp"><span>Suma de la început</span><div class="camp-suma"><input type="number" id="d-initial" min="0" step="50" value="500"><em>lei</em></div></label>
+            <label class="camp"><span>Pui deoparte în fiecare lună</span><div class="camp-suma"><input type="number" id="d-lunar" min="0" step="10" value="100"><em>lei</em></div></label>
+            <label class="camp cursor"><span>Dobândă pe an <b id="d-rata-val">5%</b></span><input type="range" id="d-rata" min="0" max="12" step="0.5" value="5"></label>
+            <label class="camp cursor"><span>Câți ani <b id="d-ani-val">10 ani</b></span><input type="range" id="d-ani" min="1" max="40" step="1" value="10"></label>
+            <p class="nota">Rata e doar un exemplu. Dobânzile reale diferă de la o bancă la alta și se schimbă în timp, iar investițiile pot avea și pierderi.</p>
+          </div>
+          <div class="carta calc-rezultat">
+            <div class="cifre-dobanda">
+              <div><span>Ai depus</span><b id="d-depus">0 lei</b></div>
+              <div><span>Câștig din dobândă</span><b class="text-menta" id="d-castig">0 lei</b></div>
+              <div class="evidentiat"><span>Vei avea</span><b id="d-final">0 lei</b></div>
+            </div>
+            <div class="grafic" id="grafic-dobanda" role="img" aria-label="Grafic: cum cresc economiile în timp"></div>
+            <div class="legenda-grafic">
+              <span><i class="linie violet"></i>Cu dobândă compusă</span>
+              <span><i class="linie gri"></i>Doar banii depuși</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- inflație -->
+      <div class="fila-panou" data-panou="inflatie" hidden>
+        <div class="calc-grila">
+          <div class="carta calc-intrari">
+            <label class="camp"><span>Suma de azi</span><div class="camp-suma"><input type="number" id="i-suma" min="0" step="50" value="1000"><em>lei</em></div></label>
+            <label class="camp cursor"><span>Inflație pe an (exemplu) <b id="i-rata-val">5%</b></span><input type="range" id="i-rata" min="0" max="15" step="0.5" value="5"></label>
+            <label class="camp cursor"><span>Peste câți ani <b id="i-ani-val">10 ani</b></span><input type="range" id="i-ani" min="1" max="30" step="1" value="10"></label>
+            <p class="nota">Inflația reală din România o publică Institutul Național de Statistică (INS) și se schimbă de la an la an.</p>
+          </div>
+          <div class="carta calc-rezultat">
+            <p class="inflatie-text">Dacă ții <b id="i-suma-text">1.000 lei</b> „la saltea”, peste <b id="i-ani-text">10 ani</b> vei putea cumpăra cu ei cam cât cumperi azi cu:</p>
+            <div class="inflatie-cifra" id="i-rezultat">614 lei</div>
+            <div class="cos" id="cos"></div>
+            <p class="nota" id="i-explicatie"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBIECTIVE -->
+    <section id="obiective" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Capitolul 3</span>
+        <h2>Obiectivele tale de economisire</h2>
+        <p>Un obiectiv clar e mai ușor de atins. Spune ce vrei, cât costă și până când — îți calculăm cât să pui deoparte în fiecare lună.</p>
+      </div>
+      <div class="obiective-grila">
+        <form class="carta form-obiectiv" id="form-obiectiv">
+          <h3>Obiectiv nou</h3>
+          <label class="camp"><span>Ce vrei?</span><input type="text" name="nume" maxlength="40" placeholder="Ex: Căști wireless" required></label>
+          <div class="rand">
+            <label class="camp"><span>Cât costă?</span><div class="camp-suma"><input type="number" name="tinta" min="1" step="1" placeholder="400" required><em>lei</em></div></label>
+            <label class="camp"><span>Ai deja</span><div class="camp-suma"><input type="number" name="strans" min="0" step="1" value="0"><em>lei</em></div></label>
+          </div>
+          <label class="camp"><span>Până când?</span><input type="month" name="termen" required></label>
+          <p class="eroare" id="eroare-obiectiv" role="alert"></p>
+          <button type="submit" class="btn btn-principal">Adaugă obiectivul</button>
+        </form>
+        <div class="lista-obiective" id="lista-obiective"></div>
+      </div>
+    </section>
+
+    <!-- JOC -->
+    <section id="joc" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Joc</span>
+        <h2>Nevoie sau dorință?</h2>
+        <p>Primești 8 cartonașe. Decide repede pentru fiecare: e o nevoie sau o dorință? Poți folosi și tastele ← și →.</p>
+      </div>
+      <div class="joc-zona">
+        <div class="joc-scena" id="joc-scena">
+          <div class="joc-start" id="joc-start">
+            <div class="cartonase-decor" aria-hidden="true"><i></i><i></i><i></i></div>
+            <button type="button" class="btn btn-principal" id="porneste-joc">Pornește jocul</button>
+            <span id="record-joc">Recordul tău: —</span>
+          </div>
+        </div>
+        <div class="joc-butoane" id="joc-butoane" hidden>
+          <button type="button" class="btn-alegere nevoie" data-alegere="nevoie"><span>←</span>Nevoie</button>
+          <button type="button" class="btn-alegere dorinta" data-alegere="dorinta">Dorință<span>→</span></button>
+        </div>
+        <p class="joc-feedback" id="joc-feedback" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Test final</span>
+        <h2>Cât de bine te descurci cu banii?</h2>
+        <p>Șase întrebări din toate lecțiile. Fiecare răspuns corect valorează 10 puncte. Ai nevoie de minimum 40 de puncte pentru certificat.</p>
+      </div>
+      <div class="carta quiz-card">
+        <div class="quiz-sus">
+          <span class="pastila mica" id="progres-quiz">6 întrebări</span>
+          <span id="scor">Scor: 0</span>
+        </div>
+        <div class="quiz-puncte" id="quiz-puncte" aria-hidden="true"></div>
+        <div id="continut">
+          <p id="intrebare">Apasă START ca să începi.</p>
+          <div id="raspunsuri"></div>
+          <p id="mesaj"></p>
+        </div>
+        <div class="quiz-actiuni">
+          <button type="button" class="btn btn-principal" id="start">START JOC</button>
+          <button type="button" class="btn btn-principal" id="urmatoarea" hidden>Următoarea întrebare</button>
+          <button type="button" class="btn btn-alb" id="reia" hidden>Încearcă din nou</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSAR -->
+    <section id="glosar" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Dicționar</span>
+        <h2>Glosar de bani</h2>
+        <p>Cuvintele pe care le auzi la bancă sau în știri, explicate pe scurt.</p>
+      </div>
+      <div class="cautare">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="cautare-glosar" placeholder="Caută un termen: dobândă, IBAN, DAE..." aria-label="Caută în glosar">
+      </div>
+      <div class="glosar" id="lista-glosar"></div>
+    </section>
+
+    <!-- CERTIFICAT -->
+    <section id="certificat" class="sectiune">
+      <div class="sectiune-cap">
+        <span class="pastila">Final</span>
+        <h2>Certificatul tău</h2>
+        <p>Termină toate cele 6 lecții și obține minimum 40 de puncte la testul final. Apoi îți scrii numele și îl poți imprima.</p>
+      </div>
+      <div class="certificat-zona" id="certificat-zona"></div>
+    </section>
+
+    <footer class="subsol">
+      <p><b>Bănuț</b> — proiect educațional. Informațiile sunt generale și nu reprezintă sfaturi financiare personalizate. Pentru decizii importante, vorbește cu părinții sau cu un specialist.</p>
+      <p>Datele tale (progresul, obiectivele) rămân doar în acest browser.</p>
+    </footer>
+  </main>
+
+  <!-- navigare pe telefon -->
+  <nav class="bara-jos" aria-label="Navigare rapidă">
+    <a href="#acasa"><svg viewBox="0 0 24 24"><path d="M4 11 12 4l8 7v9H4z"/></svg>Acasă</a>
+    <a href="#lectii"><svg viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/></svg>Lecții</a>
+    <a href="#unelte"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h8"/></svg>Calcule</a>
+    <a href="#joc"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="5"/><path d="M8 11v3M6.5 12.5h3"/></svg>Joc</a>
+    <a href="#quiz"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg>Test</a>
+  </nav>
+
+  <!-- ================= CITITOR DE LECȚII ================= -->
+  <dialog id="cititor" class="cititor" aria-labelledby="cititor-titlu">
+    <div class="cititor-cap">
+      <div>
+        <span class="pastila mica" id="cititor-numar">Lecția 1</span>
+        <h2 id="cititor-titlu">Titlu</h2>
+      </div>
+      <button type="button" class="btn-x" id="inchide-cititor" aria-label="Închide lecția"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="cititor-progres" id="cititor-progres"></div>
+    <div class="cititor-corp" id="cititor-corp"></div>
+    <div class="cititor-jos">
+      <button type="button" class="btn btn-alb" id="pagina-inapoi">Înapoi</button>
+      <span id="cititor-pagina">1 / 4</span>
+      <button type="button" class="btn btn-principal" id="pagina-inainte">Mai departe</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
